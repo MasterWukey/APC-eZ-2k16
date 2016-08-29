@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pikachu.java.pikachuwelcome&apos; to &apos;PikachuWelcome&apos;&#x0D;&#x0A;- Original project: &apos;Pikachu&apos;&#x0D;&#x0A;- Original element: &apos;pikachu.java.pikachuwelcome&apos;&#x0D;&#x0A;- Renamed element: &apos;pikachu.java.PikachuWelcome&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;pikachuwelcome&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pikachu.java{pikachuwelcome.java[pikachuwelcome" matchStrategy="1" name="PikachuWelcome" qualified="false" references="true" similarDeclarations="false" stamp="1472488420748" textual="false" version="1.0"/>
+</session>
