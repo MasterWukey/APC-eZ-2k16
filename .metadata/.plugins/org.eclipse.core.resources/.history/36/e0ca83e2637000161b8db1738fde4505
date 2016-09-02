@@ -36,27 +36,6 @@ public class Calculate {
 		return(answer);
 	}
 	
-	public static double discriminant(double a, double b, double c){
-		double answer;
-		answer=(b*b)-4*a*c;
-		return(answer);
-	}
-	
-	public static String toImproperFrac(int a, int b, int c){
-		int d=a*b+c;
-		return("the answer is:"+ d +"/"+ b);
-	}
-	
-	public static String toMixedNum(int a, int b){
-		int d=a/b;
-		int e=a%b;
-		return("the answer is:"+ d + "_"+ e +"/"+b);
-	}
-	
-	public static String foil(int a, int b, int c, int d, String n){
-		
-	}
-	
 		
 
 }
