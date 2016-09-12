@@ -68,7 +68,12 @@ public class Calculate {
 	}
 	
 	public static double absValue(double num1){
-		return Math.abs(num1);
+		if(num1<=0){
+			return (num1*-1);
+		}
+		else{
+			return (num1);
+		}
 	}
 	public static int max(int num1,int num2){
 		if(num1>=num2){
@@ -89,7 +94,12 @@ public class Calculate {
 	}
 	
 	public static int min(int num1, int num2){
-		return Math.min(num1, num2);
+		if(num1>num2){
+			return num2;
+		}
+		else{
+			return num1;
+		}
 	}
 
 	public static double round2(double num1){
@@ -98,5 +108,33 @@ public class Calculate {
 		return (roundednum/100);
 	}
 	
+	public static double exponent(double base, int power){
+		double answer=1;
+		for(int i=1; i<=power;i++){
+			answer*=base;
+		}
+		return(answer);
+	}
+		
+	public static int factoryeel(int num1){
+		int result=1;
+		for (int i=1; i<=num1; i++){
+			result=result*i;
+		}
+		return(result);
+	}
 	
+	public static boolean isPrime(int num1){
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 }

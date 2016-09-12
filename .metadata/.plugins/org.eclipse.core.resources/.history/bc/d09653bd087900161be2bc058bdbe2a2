@@ -78,5 +78,25 @@ public class Calculate {
 			return(num2);
 			}
 	}
+	
+	public static double max(double num1, double num2, double num3){
+		if(num1>=num2){
+			return Math.max(num1,num3);
+		}
+		else{
+			return Math.max(num2, num3);
+		}	
+	}
+	
+	public static int min(int num1, int num2){
+		return Math.min(num1, num2);
+	}
 
+	public static double round2(double num1){
+		num1=num1+.05;
+		double roundednum=(int)num1*100;
+		return (roundednum/100);
+	}
+	
+	
 }
