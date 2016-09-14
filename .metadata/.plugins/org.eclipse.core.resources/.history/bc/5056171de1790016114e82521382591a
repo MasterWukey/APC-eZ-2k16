@@ -75,7 +75,7 @@ public class Calculate {
 			return (num1);
 		}
 	}
-	public static double max(double num1,double num2){
+	public static int max(int num1,int num2){
 		if(num1>=num2){
 			return(num1);
 			}
@@ -86,10 +86,10 @@ public class Calculate {
 	
 	public static double max(double num1, double num2, double num3){
 		if(num1>=num2){
-			return Calculate.max(num1,num3);
+			return Math.max(num1,num3);
 		}
 		else{
-			return Calculate.max(num2, num3);
+			return Math.max(num2, num3);
 		}	
 	}
 	
@@ -103,8 +103,8 @@ public class Calculate {
 	}
 
 	public static double round2(double num1){
-		num1=(num1*100)+.5;
-		double roundednum=(int)num1;
+		num1=num1+.05;
+		double roundednum=(int)num1*100;
 		return (roundednum/100);
 	}
 	
@@ -125,26 +125,7 @@ public class Calculate {
 	}
 	
 	public static boolean isPrime(int num1){
-		boolean check;
-		for (int i=num1-1; i>1; i--){
-			check=Calculate.isDivisibleBy(num1, i);
-					if (check==true){
-						return(false);
-					}
-			}
-		return(true);
-		}
 		
-	public static int gcf(int num1, int num2){
-		while(num2!=0){
-			int num3=num1;
-			num1=num2;
-			num2=num2%num3;
-		}
-		return(num1);
-	}
-	
-	public static double sqrt(double num1){
 		
 		
 		

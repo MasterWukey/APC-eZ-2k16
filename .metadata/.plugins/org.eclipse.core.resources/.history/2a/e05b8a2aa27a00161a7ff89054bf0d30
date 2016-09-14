@@ -103,9 +103,9 @@ public class Calculate {
 	}
 
 	public static double round2(double num1){
-		num1=(num1*100)+.5;
+		num1=(num1+.05)*1000;
 		double roundednum=(int)num1;
-		return (roundednum/100);
+		return (roundednum/1000);
 	}
 	
 	public static double exponent(double base, int power){

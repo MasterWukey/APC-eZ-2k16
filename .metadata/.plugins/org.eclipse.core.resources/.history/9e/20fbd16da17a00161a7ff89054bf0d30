@@ -103,8 +103,8 @@ public class Calculate {
 	}
 
 	public static double round2(double num1){
-		num1=(num1*100)+.5;
-		double roundednum=(int)num1;
+		num1=num1+.05;
+		double roundednum=(int)num1*100;
 		return (roundednum/100);
 	}
 	
