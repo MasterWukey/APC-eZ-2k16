@@ -37,7 +37,7 @@ public class Calculate {
 		return(answer);
 	}
 	
-	public static double discriminant(double a, double b, double c){	//discrimnant
+	public static double discriminant(double a, double b, double c){	//discriminant
 		double answer;
 		answer=(b*b)-4*a*c;
 		return(answer);
@@ -116,7 +116,7 @@ public class Calculate {
 		return(answer);
 	}
 		
-	public static int factoryeel(int num1){
+	public static int factoryeel(int num1){						//excuse my puns
 		int result=1;
 		for (int i=1; i<=num1; i++){
 			result=result*i;
@@ -135,7 +135,7 @@ public class Calculate {
 		return(true);
 		}
 		
-	public static int gcf(int num1, int num2){
+	public static int gcf(int num1, int num2){				
 		while(num2!=0){
 			int num3=num1;
 			num1=num2;
@@ -144,22 +144,14 @@ public class Calculate {
 		return(num1);
 	}
 	
-	public static double sqrt(double num1){
-		for(double k=0;k<=num1; k++ ){
+	public static double sqrt(double input){					//this one took a while like a real real while
+		for(double k=0.1; k<=input; k+=.1 ){
 			double multiply=k*k;
-			if( multiply==num1){
-				return k;
+			if (Calculate.absValue(multiply-input)<=.1){
+				return Calculate.round2(k);
 			}
 		}
-	}	
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		return input;
 	}
-}
+	
+}						//final bracket to close class 
