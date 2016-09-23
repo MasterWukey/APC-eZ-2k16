@@ -154,4 +154,8 @@ public class Calculate {
 		return input;
 	}
 	
+	public static String quadForm(double num1, double num2, double num3){
+		int quadratic= Calculate.exponent(num2, 2)*Calculate.discriminant(num1, num2, num3)
+	}
+	
 }						//final bracket to close class 
