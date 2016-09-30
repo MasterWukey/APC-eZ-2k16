@@ -7,10 +7,6 @@ public class CuumAlgorithim {
 		int min;
 		int max;
 		int totalSum;
-		
-		System.out.print("how many numbers do you have);
-		
-		
 	}
 	
 }
