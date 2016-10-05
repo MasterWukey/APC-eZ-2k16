@@ -63,8 +63,9 @@ public class Calculate {
 	
 	//methods with conditionals
 	
-	public static boolean isDivisibleBy(int num1, int num2){			// makes sure the modulus is zero, if not, than its not evenly divisible
-		return(num1 % num2==0);
+	public static boolean isDivisibleBy(int num1, int num2){
+	if(num1<=0||num2<=0) throw new IllegalArgumentException("enter a positive number");
+		return(num1 % num2==0);							// makes sure the modulus is zero, if not, than its not evenly divisible
 	}
 	
 	public static double absValue(double num1){
@@ -109,6 +110,7 @@ public class Calculate {
 	}
 	
 	public static double exponent(double base, double power){
+		if(base<0) throw new IllegalArgumentException("enter a positive base");
 		double answer=1;
 		for(int i=1; i<=power;i++){
 			answer*=base;										// multiplies by the old answer a number of times equal to the power that was input
@@ -116,7 +118,8 @@ public class Calculate {
 		return(answer);
 	}
 		
-	public static int factoryeel(int num1){						//excuse my puns
+	public static int factorial(int num1){							//factorial
+		if(num1<=0) throw new IllegalArgumentException("enter a positive number");
 		int result=1;											
 		for (int i=1; i<=num1; i++){							//keeps multiplying to get the result until it reaches the end of the loop, which results in factorial
 			result=result*i;
@@ -127,7 +130,7 @@ public class Calculate {
 	public static boolean isPrime(int num1){				// checks if a number is prime
 		boolean check;
 		for (int i=num1-1; i>1; i--){
-			check=Calculate.isDivisibleBy(num1, i);
+			check=Calculate.isDivisibleBy(num1, i);			//uses isDivisible by multiple times
 					if (check==true){
 						return(false);
 					}
@@ -145,6 +148,7 @@ public class Calculate {
 	}
 	
 	public static double sqrt(double input){					//this one took a while like a real real while
+		if(input<=0) throw new IllegalArgumentException("enter a postive number");
 		for(double k=0.1; k<=input; k+=.1 ){					//multiply by increasing values until you reach the number
 			double multiply=k*k;
 			if (Calculate.absValue(multiply-input)<=.1){
