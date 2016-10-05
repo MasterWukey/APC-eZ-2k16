@@ -151,7 +151,7 @@ public class Calculate {
 	}
 	
 	public static double sqrt(double input){					//this one took a while like a real real while
-		
+		if(input<=0) throw new IllegalArgumentException("enter a postive number");
 		for(double k=0.1; k<=input; k+=.1 ){					//multiply by increasing values until you reach the number
 			double multiply=k*k;
 			if (Calculate.absValue(multiply-input)<=.1){

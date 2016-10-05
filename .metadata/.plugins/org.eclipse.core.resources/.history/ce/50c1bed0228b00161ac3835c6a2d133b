@@ -1,0 +1,17 @@
+
+public class DoMath {
+
+	public static void main(String[] args) {
+		
+		System.out.print(quadform(1.0,8.0,16.0));
+
+	
+	
+
+	}
+
+	private static char[] quadform(double d, double e, double f) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+} //bracket to close class

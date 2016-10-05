@@ -8,7 +8,7 @@ public class DoMath {
 	
 	
 
-	System.out.print(Calculate.quadForm(1, 8, 16));
+	System.out.print(Calculate.quadForm(1.0, 8.0, 16.0)
 
 	
 	}

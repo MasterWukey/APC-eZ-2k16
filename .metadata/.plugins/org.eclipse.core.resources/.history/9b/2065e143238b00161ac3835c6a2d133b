@@ -110,24 +110,21 @@ public class Calculate {
 	}
 	
 	public static double exponent(double base, double power){
-	
+		if(base<0) throw new IllegalArgumentException("enter a positive base");
 		double answer=1;
 		for(int i=1; i<=power;i++){
 			answer*=base;										// multiplies by the old answer a number of times equal to the power that was input
 		}
-		if(base<0) throw new IllegalArgumentException("enter a positive base");
 		return(answer);
 	}
 		
 	public static int factorial(int num1){							//factorial
-		
+		if(num1<=0) throw new IllegalArgumentException("enter a positive number");
 		int result=1;											
 		for (int i=1; i<=num1; i++){							//keeps multiplying to get the result until it reaches the end of the loop, which results in factorial
 			result=result*i;
 		}
-		if(num1<=0) throw new IllegalArgumentException("enter a positive number");
 		return(result);
-		
 	}
 	
 	public static boolean isPrime(int num1){				// checks if a number is prime
@@ -151,13 +148,12 @@ public class Calculate {
 	}
 	
 	public static double sqrt(double input){					//this one took a while like a real real while
-		
+		if(input<=0) throw new IllegalArgumentException("enter a postive number");
 		for(double k=0.1; k<=input; k+=.1 ){					//multiply by increasing values until you reach the number
 			double multiply=k*k;
 			if (Calculate.absValue(multiply-input)<=.1){
 				return Calculate.round2(k);						//then return value that you last multiplied
 			}
-			if(input<=0) throw new IllegalArgumentException("enter a postive number");
 		}
 		return input;
 	}
