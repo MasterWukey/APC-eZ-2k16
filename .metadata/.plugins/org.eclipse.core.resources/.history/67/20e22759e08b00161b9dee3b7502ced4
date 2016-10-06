@@ -171,7 +171,7 @@ public class Calculate {
 		}
 		
 		if (discrim==0){
-			root1=Calculate.round2(root1=(1)*num2/(2*num1));
+			root1=Calculate.round2(root1=(-1)*num2/(2*num1));
 			return (" there is one root: "+ root1);
 		}
 		if (discrim>0){

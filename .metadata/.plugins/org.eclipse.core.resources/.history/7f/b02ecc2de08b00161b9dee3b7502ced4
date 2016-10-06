@@ -94,7 +94,7 @@ public class Calculate {
 		}	
 	}
 	
-	public static double min(double num1, double num2){
+	public static int min(int num1, int num2){
 		if(num1>num2){										//basic if statement to determine which is smaller
 			return num2;
 		}
@@ -163,27 +163,17 @@ public class Calculate {
 	}
 	
 	public static String quadForm(double num1, double num2, double num3){
-		double root1;
-		double root2;
-		int discrim=(int)Calculate.discriminant(num1, num2, num3);
-		if (discrim<0){
-			return ("no real roots");
+		double quadraticplus=(num2*-1)+Calculate.sqrt(Calculate.discriminant(num1,  num2,  num3))/(num1*2);
+		double quadraticminus=(num2*-1)-Calculate.sqrt(Calculate.discriminant(num1,  num2,  num3))/(num1*2);
+		if (Calculate.discriminant(num1, num2, num3)<0){				// check for real roots
+			return("no real roots");
 		}
-		
-		if (discrim==0){
-			root1=Calculate.round2(root1=(1)*num2/(2*num1));
-			return (" there is one root: "+ root1);
+		if (Calculate.discriminant(num1, num2, num3)==0){				//check for single root
+			return("one real root: " + Calculate.round2(quadraticplus));
 		}
-		if (discrim>0){
-			root1=(num2*(-1)+Calculate.sqrt(Calculate.discriminant(num1, num2, num3)))/(2*num1);
-			root1=Calculate.round2(root1);
-			root2=(num2*(-1)-Calculate.sqrt(Calculate.discriminant(num1, num2, num3)))/(2*num1);
-			root2=Calculate.round2(root2);
-			double smaller=Calculate.min(root1, root2);
-			double larger=Calculate.max(root1, root2);
-			return ("the roots are: "+ root1+ "and "+ root2);
-		}
-		return null;
+		else
+			return("positive root: " + Calculate.round2(quadraticplus)+ "/n" +  "negative root: " + Calculate.round2(quadraticminus));	// else, do two real roots
 				
-	}	
+	}
+	
 }						//final bracket to close class 
