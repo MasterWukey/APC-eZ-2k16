@@ -5,6 +5,18 @@ public class Magpie4 {
 		return "Hello, let's talk.";
 	}
 
+
+	/*
+	 * 1) Copy and paste the code you wrote in Magpie 3 into the getResponse method. There is new code within the method 
+	 * but below where you will paste your code.  Figure out what it does.
+	 * 
+	 * 2) Copy and paste Part 3's getRandomResponse() code into the method below.
+	 * 
+	 * 3) Alter the class as described in the handout.
+	 * 
+	 */
+	
+	
 	/**
 	 * Gives a response to a user statement
 	 * takes in user statement
@@ -32,18 +44,24 @@ public class Magpie4 {
 				response="ah, yes. The front page of the internet";				//extra word #2: reddit
 			else if (findKeyword(statement,"programming",0)>=0)
 				response="Certainly. the computer is man's best friend";		//extra word #3: programming
-		else if (findKeyword(statement, "I want to", 0) >= 0) {		// Responses which require transformations
+			else {
+			response = getRandomResponse();
+			}
+		// Responses which require transformations
+		 if (findKeyword(statement, "I want to", 0) >= 0) {
 			response = transformIWantToStatement(statement);
 		}
-		else 		
-			int psn = findKeyword(statement, "you", 0); 		// Look for a two word (you <something> me)
+
+		else {
+			// Look for a two word (you <something> me)
+			// pattern
+			int psn = findKeyword(statement, "you", 0);
 
 			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
 				response = transformYouMeStatement(statement);
 			} else {
 				response = getRandomResponse();
 			}
-		}
 		}
 		return response;
 	}

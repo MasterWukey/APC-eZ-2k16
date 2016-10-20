@@ -33,18 +33,18 @@ public class Magpie3 {
 					response="Say something, please";
 				if (statement.indexOf("no") >= 0) {
 					response = "Why so negative?";
-				} else if (findKeyword(statement,"mother",0) >= 0
-						|| findKeyword(statement,"father",0) >= 0
-						|| findKeyword(statement,"sister",0) >= 0
-						|| findKeyword(statement,"brother",0) >= 0) 
+				} else if (findKeyword("statement","mother",0) >= 0
+						|| findKeyword("statement","father",0) >= 0
+						|| findKeyword("statement","sister",0) >= 0
+						|| findKeyword("statement","brother",0) >= 0) 
 					response = "Tell me more about your family.";
-					else if (findKeyword(statement,"Mrs.Dreyer",0)>=0)						//teacher: mrs. Dreyer
+					else if (findKeyword("statement","Mrs.Dreyer",0)>=0)						//teacher: mrs. Dreyer
 						response="She sounds like a great teacher!";
-					else if (findKeyword(statement,"school",0)>=0)							//extra word #1: school
+					else if (findKeyword("trimcheck","school",0)>=0)							//extra word #1: school
 						response="School is exciting!";
-					else if ( findKeyword(statement,"reddit",0)>=0)
+					else if ( findKeyword("statement","reddit",0)>=0)
 						response="ah, yes. The front page of the internet";				//extra word #2: reddit
-					else if (findKeyword(statement,"programming",0)>=0)
+					else if (findKeyword("statement","programming",0)>=0)
 						response="Certainly. the computer is man's best friend";		//extra word #3: programming
 					else {
 					response = getRandomResponse();
