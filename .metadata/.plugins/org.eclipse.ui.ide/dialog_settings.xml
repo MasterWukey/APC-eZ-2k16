@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\APCS2\Desktop\APC-eZ-2k16\StringSplit - Luke Yee\Srting Split\src"/>
+		<item value="C:\Users\APCS2\Desktop\APC-eZ-2k16\StringSplit\src"/>
+		<item value="C:\Users\APCS2\Desktop\APC-eZ-2k16\StringSplit"/>
 		<item value="C:\Users\APCS2\Desktop\APC-eZ-2k16\Magpie4"/>
 		<item value="C:\Users\APCS2\Desktop\APC-eZ-2k16\MagPie2"/>
 		<item value="C:\Users\APCS2\Desktop\APC-eZ-2k16\Magpie3"/>
