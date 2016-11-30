@@ -1,0 +1,22 @@
+package fracCalc;
+
+public class FracCalc {
+
+    public static void main(String[] args) 
+    {
+        
+    	
+
+    }
+    
+   
+    public static String produceAnswer(String input)
+    { 
+       
+        
+        return "";
+    }
+
+    
+    
+}
