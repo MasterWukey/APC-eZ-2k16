@@ -47,7 +47,7 @@ public class FracCalc {
     	   String Op1= input.substring(0, i);
     	   String Op2= input.substring(i+3, input.length());
     	   String operator= input.substring(i, i+1);
-    	   
+    	   return Op2;
     	   }  
     	   
        }
