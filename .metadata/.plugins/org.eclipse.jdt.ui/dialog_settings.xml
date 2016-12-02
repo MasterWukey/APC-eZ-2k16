@@ -34,6 +34,8 @@
 		<item value="1" key="pageIndex"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item value="728" key="size.y"/>
+		<item value="355" key="size.x"/>
 	</section>
 	<section name="JarPackageWizard">
 		<item value="false" key="JarPackageWizardPage.INCLUDE_DIRECTORY_ENTRIES"/>

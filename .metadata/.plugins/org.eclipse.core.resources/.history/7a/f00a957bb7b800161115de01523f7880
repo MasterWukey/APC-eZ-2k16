@@ -41,21 +41,18 @@ public class FracCalc {
    
     public static String produceAnswer(String input)
     { 
-      
-    	   int i=input.indexOf(" ");
+       for(int i=0; i<input.length(); i++){
+    	   if(i==input.indexOf(" ")){
     	   int opIndex=i;
     	   String Op1= input.substring(0, i);
     	   String Op2= input.substring(i+3, input.length());
     	   String operator= input.substring(i, i+1);
     	   
-    	   
     	   }  
     	   
-   public int[] parseOperand(String AnoP){    
-	if(AnoP.indexOf("_")>=0){							
-		int whole=parseInt()
-	}
+       }
+	return null;
     
+    }
     
-   }  
 }//end of class bracket-KEEP
