@@ -52,22 +52,11 @@ public class FracCalc {
     	   }  
     	   
    public int[] parseOperand(String Op){    	//will take in the string, turn it into an improper fraction that can be added/multiplied
-	   int whole;
-	   int num;
-	   int dem;
-	   if(Op.indexOf("_")>=0){											//checks if there even is a whole part in the input operand
-		 whole=Integer.parseInt(Op.substring(0, Op.indexOf("_")));		//gets whole part of operand
-	   } 
-	   else{
-			 whole=0;													//if no whole part, whole is set to 0
-	   }
-	  if(Op.indexOf("_")>=0){
-		  num=Integer.parseInt(Op.substring(Op.indexOf("_")+1, Op.indexOf("/")));	//get numerator if there is a whole num in operand
-	  }
-	  else{
-		  num=Integer.parseInt(Op.substring(0, Op.indexOf("/")));				//gets numerator if there is no whole num in operand
-	  }
-	  dem=Integer.parseInt(Op.substring(Op.indexOf("/")+1, Op.length()));		//dem is always same no matter what
-	  
+	if(AnoP.indexOf("_")>=0){
+		int whole1=Integer.parseInt(AnoP.substring(0, AnoP.indexOf("_")));						//get whole part of first operand.FIX
+		int whole2=Integer.parseInt(AnoP.substring(AnoP.indexOf(" ")+3,AnoP.indexOf("_")));		//get the whole part of second operand
+	}
+    
+    
    }  
 }//end of class bracket-KEEP
