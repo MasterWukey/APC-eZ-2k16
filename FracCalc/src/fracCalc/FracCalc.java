@@ -47,11 +47,15 @@ public class FracCalc {
     	   String Op1= input.substring(0, i);					//get the 1st operand	
     	   String Op2= input.substring(i+3, input.length());	//get the 2nd operand
     	   String operator= input.substring(i, i+1);			//find the operator
-    	   
-    	   
+    	   if(operator.equals("+")||operator.equals("-")){
+    		  return addFrac(parseOperand(Op1), parseOperand(Op2), operator);
+    	   }
+    	   if(operator.equals("*")|| operator.equals("/")){
+    		   
+    	   }
     	   }  
     	   
-   public int[] parseOperand(String Op){    	//will take in the string, turn it into an improper fraction that can be added/multiplied
+   public static int[] parseOperand(String Op){    	//will take in the string, turn it into an improper fraction that can be added/multiplied
 	   int whole;
 	   int num;
 	   int dem;
@@ -68,6 +72,33 @@ public class FracCalc {
 		  num=Integer.parseInt(Op.substring(0, Op.indexOf("/")));				//gets numerator if there is no whole num in operand
 	  }
 	  dem=Integer.parseInt(Op.substring(Op.indexOf("/")+1, Op.length()));		//dem is always same no matter what
-	  
-   }  
+	  int[] impropArray= new int [2];											//create array that stores two numbers
+	  impropArray[0]= (whole*dem)+num;											//first element stores the improper numerator
+	  impropArray[1]=dem;														//second element stores the denominator
+	  return (impropArray);
+   }
+   public static String addFrac(int[]array1,int[]array2, String operator){
+	   
+	   int num1=array1[0];
+	   int dem1=array1[1];
+	   int num2=array2[0];
+	   int dem2= array2[1];
+	   if(operator.equals("-")){
+		   num2=num2*-1;
+	   }
+	   int numSum=num1*dem2+num2*dem1;
+	   int demSum=dem1*dem2;
+	   simplifyFrac(numSum, demSum);
+	   String answer=Integer.toString(numSum) +"/" + Integer.toString(demSum);
+	   return(answer);
+	   
+   }//end of addfrac
+   
+   public static void simplifyFrac(int a, int b){
+	   
+		   
+	   
+   }//end of simplifyFrac
+   
+   
 }//end of class bracket-KEEP
